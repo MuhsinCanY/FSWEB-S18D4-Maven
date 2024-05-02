@@ -1,0 +1,77 @@
+-------------------------------------------------------------------------------
+Test set: com.workintech.s18d1.MainTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 2, Errors: 7, Skipped: 0, Time elapsed: 0.678 s <<< FAILURE! -- in com.workintech.s18d1.MainTest
+com.workintech.s18d1.MainTest.testFindById_NotExists -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected com.workintech.s18d1.exceptions.BurgerException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at com.workintech.s18d1.MainTest.testFindById_NotExists(MainTest.java:114)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testFindAll -- Time elapsed: 0.037 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.size()" because "burgers" is null
+	at com.workintech.s18d1.MainTest.testFindAll(MainTest.java:99)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testFindById_Exists -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.workintech.s18d1.entity.Burger.getId()" because "found" is null
+	at com.workintech.s18d1.MainTest.testFindById_Exists(MainTest.java:108)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testSave -- Time elapsed: 0.007 s <<< FAILURE!
+Wanted but not invoked:
+entityManager.persist(
+    Burger(id=1, name=null, price=null, isVegan=null, breadType=null, contents=null)
+);
+-> at com.workintech.s18d1.MainTest.testSave(MainTest.java:90)
+Actually, there were zero interactions with this mock.
+
+	at com.workintech.s18d1.MainTest.testSave(MainTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testFindByBreadType -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.size()" because "burgers" is null
+	at com.workintech.s18d1.MainTest.testFindByBreadType(MainTest.java:151)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testFindByContent -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.size()" because "burgers" is null
+	at com.workintech.s18d1.MainTest.testFindByContent(MainTest.java:160)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testFindByPrice -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.size()" because "burgers" is null
+	at com.workintech.s18d1.MainTest.testFindByPrice(MainTest.java:142)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testRemove -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.workintech.s18d1.entity.Burger.getId()" because "removed" is null
+	at com.workintech.s18d1.MainTest.testRemove(MainTest.java:133)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.workintech.s18d1.MainTest.testUpdate -- Time elapsed: 0 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.workintech.s18d1.entity.Burger.getId()" because "updated" is null
+	at com.workintech.s18d1.MainTest.testUpdate(MainTest.java:123)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
